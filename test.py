@@ -1,0 +1,27 @@
+import unittest
+from primes import is_prime
+
+class PrimesTestCase(unittest.TestCase):
+    """Tests for `primes.py`."""
+
+    def test_is_number(self):
+        """Is arg a number?"""
+        self.assertFalse(is_prime(8))
+
+    def test_is_7_prime(self):
+        """Is seven successfully determined to be prime?"""
+        self.assertTrue(is_prime(7))
+
+    def test_is_four_non_prime(self):
+        """Is four correctly determined not to be prime?"""
+        self.assertFalse(is_prime(4), msg='Four is not prime!')
+
+    def test_is_zero_not_prime(self):
+        """Is zero correctly determined not to be prime?"""
+        self.assertFalse(is_prime(0))
+
+    
+
+
+if __name__ == '__main__':
+    unittest.main()
