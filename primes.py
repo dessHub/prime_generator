@@ -1,6 +1,6 @@
 def is_prime(num):
-    """Return True if *number* is prime."""
-    if isinstance(num, int):      #Check if the arg num is an interger.
+    """Return True if num is prime."""
+    if isinstance(num, int):      #Check if the arg num is an integer.
         if num <= 1:              #prime numbers are considered >1.
             return False
 
@@ -8,14 +8,14 @@ def is_prime(num):
             if num % element == 0:
                 return False
 
-    else :                         #Return False if the arg is not an interger.
+    else :                         #Return False if the arg is not an integer.
         return false
 
 
     return True
 
 def print_prime(num):             #A function to print the results from is_prime function.
-    """Return True if *number* is prime."""
+    """Print the closest prime number smaller than num."""
     index = num
 
     while True:
@@ -24,3 +24,5 @@ def print_prime(num):             #A function to print the results from is_prime
             print(index)
         elif index < 2:
             break
+
+print_prime(5)

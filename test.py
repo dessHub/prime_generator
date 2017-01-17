@@ -12,9 +12,9 @@ class PrimesTestCase(unittest.TestCase):
         """Is seven successfully determined to be prime?"""
         self.assertTrue(is_prime(7))
 
-    def test_is_four_non_prime(self):
-        """Is four correctly determined not to be prime?"""
-        self.assertFalse(is_prime(4), msg='Four is not prime!')
+    def test_is_six_non_prime(self):
+        """Is six correctly determined not to be prime?"""
+        self.assertFalse(is_prime(6), msg='Six is not prime!')
 
     def test_is_zero_not_prime(self):
         """Is zero correctly determined not to be prime?"""
