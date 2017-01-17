@@ -20,7 +20,18 @@ class PrimesTestCase(unittest.TestCase):
         """Is zero correctly determined not to be prime?"""
         self.assertFalse(is_prime(0))
 
-    
+    def test_negative_number(self):
+        """Is a negative number correctly determined not to be prime?"""
+        for index in range(-1, -10, -1):
+            self.assertFalse(is_prime(index), msg='{} should not be determined to be prime'.format(index))
+
+    def test_arg_less_than_two(self):
+        """Is args less than two correctly checked"""
+        self.assertRaises(ValueError)
+
+    def test_is_not_a_string(self):
+        """Arg is not a string"""
+        self.assertRaises(TypeError)
 
 
 if __name__ == '__main__':
